@@ -3,15 +3,15 @@
 1.节点启动：启动了三个节点
 ```
 eosio：
- ./nodeos -d ~/eos.data/generator_node --config-dir ~/eos.data/generator_node -l ~/eos.data/logging.json  --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876 --p2p-listen-endpoint localhost:5555 
+ ./nodeos -d ~/eos.data/generator_node --config-dir ~/eos.data/generator_node   --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876 --p2p-listen-endpoint localhost:5555 
 ```
 ```
 bp1：
- ./nodeos -d ~/eos.data/generator_node --config-dir ~/eos.data/generator_node -l ~/eos.data/logging.json  --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876   --p2p-peer-address localhost:4444    --p2p-listen-endpoint localhost:5555 
+ ./nodeos -d ~/eos.data/generator_node --config-dir ~/eos.data/generator_node   --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876   --p2p-peer-address localhost:4444    --p2p-listen-endpoint localhost:5555 
 ```
 ```
 bp2：
- ./nodeos -d ~/eos.data/bp2_node --config-dir ~/eos.data/bp2_node -l ~/eos.data/logging.json  --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876   --p2p-peer-address localhost:5555    --p2p-listen-endpoint localhost:4444 
+ ./nodeos -d ~/eos.data/bp2_node --config-dir ~/eos.data/bp2_node   --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876   --p2p-peer-address localhost:5555    --p2p-listen-endpoint localhost:4444 
 ```
 ```
 ./nodeos -d /root/EOS-Boot-Steps-dawn4/  --config-dir  /root/EOS-Boot-Steps-dawn4/config
