@@ -1,25 +1,30 @@
 # eosio-dawn4.0
 
 1.节点启动：启动了三个节点
+```
 eosio：
  ./nodeos -d ~/eos.data/generator_node --config-dir ~/eos.data/generator_node -l ~/eos.data/logging.json  --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876 --p2p-listen-endpoint localhost:5555 
-
+```
+```
 bp1：
  ./nodeos -d ~/eos.data/generator_node --config-dir ~/eos.data/generator_node -l ~/eos.data/logging.json  --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876   --p2p-peer-address localhost:4444    --p2p-listen-endpoint localhost:5555 
-
+```
+```
 bp2：
  ./nodeos -d ~/eos.data/bp2_node --config-dir ~/eos.data/bp2_node -l ~/eos.data/logging.json  --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --p2p-peer-address localhost:9876   --p2p-peer-address localhost:5555    --p2p-listen-endpoint localhost:4444 
-
-
+```
+```
 ./nodeos -d /root/EOS-Boot-Steps-dawn4/  --config-dir  /root/EOS-Boot-Steps-dawn4/config
+```
 其中还要配置config文件，把BP1 和BP2 的秘钥加入到对应的config文件中，这里的秘钥也是后面创建bp，并且注册生产者的秘钥。
 private-key = ["EOS5JaXkrizggfLXoQ5qACvZJVCheJdR3ipKJk6pnF7o5N5uaseMP","5KZeRRaMw5QpWvwSpRxCK1ib3UyqZaQ6mDLdmJRZMvuQk72P6KJ"]
 
 
 2.创建钱包
-#./cleos wallet create PW5KHHECv4bJxXsLocmsSnkdMvMBood5Tnd3KYmWEySfnvY1bqe9b
+```
+./cleos wallet create PW5KHHECv4bJxXsLocmsSnkdMvMBood5Tnd3KYmWEySfnvY1bqe9b
 ./cleos wallet unlock --password  PW5KHHECv4bJxXsLocmsSnkdMvMBood5Tnd3KYmWEySfnvY1bqe9b
-
+```
 3.部署eosio合约
 
 系统部署合约之前都需要部署一个bios合约
